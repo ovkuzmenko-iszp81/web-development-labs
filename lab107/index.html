@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Software development process</title>
+		<link rel="apple-touch-icon" href="apple-favicon.png"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="canonical" href="https://en.wikipedia.org/wiki/Software_development_process"/>
+	</head>
+	<body>
+		<h1>Software development process</h1>
+		<p>
+			In 
+			<a href="https://en.wikipedia.org/wiki/Software_engineering" title="Software engineering">software engineering</a>, a 
+			<b>software development process</b> is the process of dividing 
+			<a href="https://en.wikipedia.org/wiki/Software_development" title="Software development">software development</a> work into distinct phases to improve 
+			<a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">design</a>, 
+			<a href="https://en.wikipedia.org/wiki/Software_product_management" title="Software product management">product management</a>, and 
+			<a href="https://en.wikipedia.org/wiki/Software_project_management" title="Software project management">project management</a>.  It is also known as a 
+			<b>software development life cycle</b> (
+			<b>SDLC</b>). The methodology may include the pre-definition of specific 
+			<a href="https://en.wikipedia.org/wiki/Deliverable" title="Deliverable">deliverables</a> and artifacts that are created and completed by a project team to develop or maintain an application.
+			<sup id="cite_ref-CMS08_1-0">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<p>
+			Most modern development processes can be vaguely described as 
+			<a href="https://en.wikipedia.org/wiki/Agile_software_development" title="Agile software development">agile</a>. Other methodologies include 
+			<a href="https://en.wikipedia.org/wiki/Waterfall_model" title="Waterfall model">waterfall</a>, 
+			<a href="https://en.wikipedia.org/wiki/Software_prototyping" title="Software prototyping">prototyping</a>, 
+			<a href="https://en.wikipedia.org/wiki/Iterative_and_incremental_development" title="Iterative and incremental development">iterative and incremental development</a>, 
+			<a href="https://en.wikipedia.org/wiki/Spiral_development" title="Spiral development">spiral development</a>, 
+			<a href="https://en.wikipedia.org/wiki/Rapid_application_development" title="Rapid application development">rapid application development</a>, and 
+			<a href="https://en.wikipedia.org/wiki/Extreme_programming" title="Extreme programming">extreme programming</a>.
+		</p>
+		<p>
+			Some people
+			<sup>&#91;
+				<i>
+					<a href="https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions" title="Wikipedia:Manual of Style/Words to watch">
+						<span title="The material near this tag possibly uses too-vague attribution or weasel words. (June 2019)">who?</span>
+					</a>
+				</i>&#93;
+			</sup> consider a life-cycle "model" a more general term for a category of methodologies and a software development "process" a more specific term to refer to a specific process chosen by a specific organization. For example, there are many specific software development processes that fit the spiral life-cycle model. The field is often considered a subset of the 
+			<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle" title="Systems development life cycle">systems development life cycle</a>.
+		</p>
+
+		<h2>Contents</h2>
+		<ul>
+			<li>
+				<a href="#History">
+					<span>1</span>
+					<span>History</span>
+				</a>
+			</li>
+			<li>
+				<a href="#Practices">
+					<span>2</span>
+					<span>Practices</span>
+				</a>
+				<ul>
+					<li>
+						<a href="#Continuous_integration">
+							<span>2.1</span>
+							<span>Continuous integration</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Prototyping">
+							<span>2.2</span>
+							<span>Prototyping</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Incremental_development">
+							<span>2.3</span>
+							<span>Incremental development</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Rapid_application_development">
+							<span>2.4</span>
+							<span>Rapid application development</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#Methodologies">
+					<span>3</span>
+					<span>Methodologies</span>
+				</a>
+				<ul>
+					<li>
+						<a href="#Agile_development">
+							<span>3.1</span>
+							<span>Agile development</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Waterfall_development">
+							<span>3.2</span>
+							<span>Waterfall development</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Spiral_development">
+							<span>3.3</span>
+							<span>Spiral development</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Offshore_development">
+							<span>3.4</span>
+							<span>Offshore development</span>
+						</a>
+					</li>
+					<li>
+						<a href="#Other">
+							<span>3.5</span>
+							<span>Other</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#Process_meta-models">
+					<span>4</span>
+					<span>Process meta-models</span>
+				</a>
+			</li>
+			<li>
+				<a href="#In_practice">
+					<span>5</span>
+					<span>In practice</span>
+				</a>
+			</li>
+			<li>
+				<a href="#See_also">
+					<span>6</span>
+					<span>See also</span>
+				</a>
+			</li>
+			<li>
+				<a href="#References">
+					<span>7</span>
+					<span>References</span>
+				</a>
+			</li>
+			<li>
+				<a href="#External_links">
+					<span>8</span>
+					<span>External links</span>
+				</a>
+			</li>
+		</ul>
+
+		<h2 id="History">History</h2>
+		<p>
+			The software development methodology (also known as SDM) framework didn't emerge until the 1960s. According to Elliott (2004) the 
+			<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle" title="Systems development life cycle">systems development life cycle</a> (SDLC) can be considered to be the oldest formalized methodology framework for building 
+			<a href="https://en.wikipedia.org/wiki/Information_system" title="Information system">information systems</a>. The main idea of the SDLC has been "to pursue the development of information systems in a very deliberate, structured and methodical way, requiring each stage of the life cycle––from inception of the idea to delivery of the final system––to be carried out rigidly and sequentially"
+			<sup id="cite_ref-Ell04_2-0">
+				<a href="#cite_note-Ell04-2">&#91;2&#93;</a>
+			</sup> within the context of the framework being applied. The main target of this methodology framework in the 1960s was "to develop large scale functional 
+			<a href="https://en.wikipedia.org/wiki/Business_system" title="Business system">business systems</a> in an age of large scale business conglomerates. Information systems activities revolved around heavy 
+			<a href="https://en.wikipedia.org/wiki/Data_processing" title="Data processing">data processing</a> and 
+			<a href="https://en.wikipedia.org/wiki/Number_crunching" title="Number crunching">number crunching</a> routines".
+			<sup id="cite_ref-Ell04_2-1">
+				<a href="#cite_note-Ell04-2">&#91;2&#93;</a>
+			</sup>
+		</p>
+		<p>
+			Methodologies, processes, and frameworks range from specific proscriptive steps that can be used directly by an organization in day-to-day work, to flexible frameworks that an organization uses to generate a custom set of steps tailored to the needs of a specific project or group.  In some cases a "sponsor" or "maintenance" organization distributes an official set of documents that describe the process.  Specific examples include:
+		</p>
+		<dl>
+			<dt>1970s</dt>
+		</dl>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Structured_programming" title="Structured programming">Structured programming</a> since 1969
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Cap_Gemini_SDM" title="Cap Gemini SDM">Cap Gemini SDM</a>, originally from PANDATA, the first English translation was published in 1974. SDM stands for System Development Methodology
+			</li>
+		</ul>
+		<dl>
+			<dt>1980s</dt>
+		</dl>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Structured_systems_analysis_and_design_method" title="Structured systems analysis and design method">Structured systems analysis and design method</a> (SSADM) from 1980 onwards
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Soft_systems_methodology" title="Soft systems methodology">Information Requirement Analysis/Soft systems methodology</a>
+			</li>
+		</ul>
+		<dl>
+			<dt>1990s</dt>
+		</dl>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented programming</a> (OOP) developed in the early 1960s, and became a dominant programming approach during the mid-1990s
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Rapid_application_development" title="Rapid application development">Rapid application development</a> (RAD), since 1991
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Dynamic_systems_development_method" title="Dynamic systems development method">Dynamic systems development method</a> (DSDM), since 1994
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Scrum_(development)" title="Scrum (development)">Scrum</a>, since 1995
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Team_software_process" title="Team software process">Team software process</a>, since 1998
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Rational_Unified_Process" title="Rational Unified Process">Rational Unified Process</a> (RUP), maintained by IBM since 1998
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Extreme_programming" title="Extreme programming">Extreme programming</a>, since 1999
+			</li>
+		</ul>
+		<dl>
+			<dt>2000s</dt>
+		</dl>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Agile_Unified_Process" title="Agile Unified Process">Agile Unified Process</a> (AUP) maintained since 2005 by 
+				<a href="https://en.wikipedia.org/wiki/Scott_Ambler" title="Scott Ambler">Scott Ambler</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Disciplined_agile_delivery" title="Disciplined agile delivery">Disciplined agile delivery</a> (DAD) Supersedes AUP
+			</li>
+		</ul>
+		<p>
+			<b>2010s</b>
+		</p>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Scaled_Agile_Framework" title="Scaled Agile Framework">Scaled Agile Framework</a> (SAFe)
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Large-Scale_Scrum" title="Large-Scale Scrum">Large-Scale Scrum</a> (LeSS)
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/DevOps" title="DevOps">DevOps</a>
+			</li>
+		</ul>
+		<p>
+			It is notable that since DSDM in 1994, all of the methodologies on the above list except RUP have been agile methodologies - yet many organisations, especially governments, still use  pre-agile processes (often waterfall or similar). Software process and 
+			<a href="https://en.wikipedia.org/wiki/Software_quality" title="Software quality">software quality</a> are closely interrelated; some unexpected facets and effects have been observed in practice  
+			<sup id="cite_ref-ieeesw_3-0">
+				<a href="#cite_note-ieeesw-3">&#91;3&#93;</a>
+			</sup>
+		</p>
+		<p>Since the early 2000s scaling agile delivery processes has become the biggest challenge for teams using agile processes.
+			<sup id="cite_ref-4">
+				<a href="#cite_note-4">&#91;4&#93;</a>
+			</sup>
+		</p>
+		<p>Among these another software development process has been established in 
+			<a href="https://en.wikipedia.org/wiki/Open-source_software" title="Open-source software">open source</a>. The adoption of these best practices known and established processes within the confines of a company is called 
+			<a href="https://en.wikipedia.org/wiki/Inner_source" title="Inner source">inner source</a>.
+		</p>
+
+		<h2 id="Practices">Practices</h2>
+		<p>
+			Several software development approaches have been used since the origin of information technology, in two main categories. Typically an approach or a combination of approaches is chosen by management or a development team.
+		</p>
+		<p>
+			"Traditional" methodologies such as waterfall that have distinct phases are sometimes known as 
+			<b>software development life cycle</b> (SDLC) methodologies, though this term could also be used more generally to refer to any methodology. A "life cycle" approach with distinct phases is in contrast to Agile approaches which define a process of iteration, but where design, construction, and deployment of different pieces can occur simultaneously.
+		</p>
+		<h3 id="Continuous_integration">Continuous integration</h3>
+		<div role="note">
+			Main article: 
+			<a href="https://en.wikipedia.org/wiki/Continuous_integration" title="Continuous integration">Continuous integration</a>
+		</div>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Continuous_integration" title="Continuous integration">Continuous integration</a> is the practice of merging all developer working copies to a shared 
+			<a href="https://en.wikipedia.org/wiki/Trunk_(software)" title="Trunk (software)">mainline</a> several times a day.
+			<sup id="cite_ref-CI0_5-0">
+				<a href="#cite_note-CI0-5">&#91;5&#93;</a>
+			</sup>
+			<a href="https://en.wikipedia.org/wiki/Grady_Booch" title="Grady Booch">Grady Booch</a> first named and proposed CI in 
+			<a href="https://en.wikipedia.org/wiki/Booch_method" title="Booch method">his 1991 method</a>,
+			<sup id="cite_ref-6">
+				<a href="#cite_note-6">&#91;6&#93;</a>
+			</sup> although he did not advocate integrating several times a day. 
+			<a href="https://en.wikipedia.org/wiki/Extreme_programming" title="Extreme programming">Extreme programming</a> (XP) adopted the concept of CI and did advocate integrating more than once per day – perhaps as many as tens of times per day.
+		</p>
+		<h3 id="Prototyping">Prototyping</h3>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Software_prototyping" title="Software prototyping">Software prototyping</a> is about creating prototypes, i.e. incomplete versions of the software program being developed.
+		</p>
+		<p>
+			The basic principles are:
+			<sup id="cite_ref-CMS08_1-1">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<ul>
+			<li>
+				Prototyping is not a standalone, complete development methodology, but rather an approach to try out particular features in the context of a full methodology (such as incremental, spiral, or rapid application development (RAD)).
+			</li>
+			<li>Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.</li>
+			<li>The client is involved throughout the development process, which increases the likelihood of client acceptance of the final implementation.</li>
+			<li>While some prototypes are developed with the expectation that they will be discarded, it is possible in some cases to evolve from prototype to working system.</li>
+		</ul>
+		<p>
+			A basic understanding of the fundamental business problem is necessary to avoid solving the wrong problems, but this is true for all software methodologies.
+		</p>
+		<h3 id="Incremental_development">Incremental development</h3>
+		<div role="note">
+			Main article: 
+			<a href="https://en.wikipedia.org/wiki/Iterative_and_incremental_development" title="Iterative and incremental development">Iterative and incremental development</a>
+		</div>
+		<p>
+			Various methods are acceptable for combining linear and iterative systems development methodologies, with the primary objective of each being to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.
+		</p>
+		<p>
+			There are three main variants of incremental development:
+			<sup id="cite_ref-CMS08_1-2">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<ol>
+			<li>A series of mini-Waterfalls are performed, where all phases of the Waterfall are completed for a small part of a system, before proceeding to the next increment, or</li>
+			<li>Overall requirements are defined before proceeding to evolutionary, mini-Waterfall development of individual increments of a system, or</li>
+			<li>
+				The initial software concept, requirements analysis, and design of architecture and system core are defined via Waterfall, followed by incremental implementation, which culminates in installing the final version, a working system.
+			</li>
+		</ol>
+		<h3 id="Rapid_application_development">Rapid application development</h3>
+		<img src="img/RADModel.JPG" width="220" height="141" />
+		<span>Rapid Application Development (RAD) Model</span>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Rapid_application_development" title="Rapid application development">Rapid application development</a> (RAD) is a software development methodology, which favors 
+			<a href="https://en.wikipedia.org/wiki/Iterative_development" title="Iterative development">iterative development</a> and the rapid construction of 
+			<a href="https://en.wikipedia.org/wiki/Prototype" title="Prototype">prototypes</a> instead of large amounts of up-front planning. The "planning" of software developed using RAD is interleaved with writing the software itself. The lack of extensive pre-planning generally allows software to be written much faster, and makes it easier to change requirements.
+		</p>
+		<p>
+			The rapid development process starts with the development of preliminary 
+			<a href="https://en.wikipedia.org/wiki/Data_model" title="Data model">data models</a> and 
+			<a href="https://en.wikipedia.org/wiki/Business_process_model" title="Business process model">business process models</a> using 
+			<a href="https://en.wikipedia.org/wiki/Structured_technique" title="Structured technique">structured techniques</a>. In the next stage, requirements are verified using prototyping, eventually to refine the data and process models. These stages are repeated iteratively; further development results in "a combined business requirements and technical design statement to be used for constructing new systems".
+			<sup id="cite_ref-WBD04_7-0">
+				<a href="#cite_note-WBD04-7">&#91;7&#93;</a>
+			</sup>
+		</p>
+		<p>
+			The term was first used to describe a software development process introduced by 
+			<a href="https://en.wikipedia.org/wiki/James_Martin_(author)" title="James Martin (author)">James Martin</a> in 1991.  According to Whitten (2003), it is a merger of various 
+			<a href="https://en.wikipedia.org/wiki/Structured_Analysis_and_Design_Technique" title="Structured Analysis and Design Technique">structured techniques</a>, especially data-driven 
+			<a href="https://en.wikipedia.org/wiki/Information_technology_engineering" title="Information technology engineering">information technology engineering</a>, with prototyping techniques to accelerate software systems development.
+			<sup id="cite_ref-WBD04_7-1">
+				<a href="#cite_note-WBD04-7">&#91;7&#93;</a>
+			</sup>
+		</p>
+		<p>
+			The basic principles of rapid application development are:
+			<sup id="cite_ref-CMS08_1-3">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<ul>
+			<li>Key objective is for fast development and delivery of a high quality system at a relatively low investment cost.</li>
+			<li>Attempts to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process.</li>
+			<li>
+				Aims to produce high quality systems quickly, primarily via iterative Prototyping (at any stage of development), active user involvement, and computerized development tools. These tools may include 
+				<a href="https://en.wikipedia.org/wiki/Graphical_User_Interface" title="Graphical User Interface">Graphical User Interface</a> (GUI) builders, 
+				<a href="https://en.wikipedia.org/wiki/Computer_Aided_Software_Engineering" title="Computer Aided Software Engineering">Computer Aided Software Engineering</a> (CASE) tools, 
+				<a href="https://en.wikipedia.org/wiki/Database_Management_System" title="Database Management System">Database Management Systems</a> (DBMS), 
+				<a href="https://en.wikipedia.org/wiki/Fourth-generation_programming_language" title="Fourth-generation programming language">fourth-generation programming languages</a>, code generators, and object-oriented techniques.
+			</li>
+			<li>
+				Key emphasis is on fulfilling the business need, while technological or engineering excellence is of lesser importance.
+			</li>
+			<li>
+				Project control involves prioritizing development and defining delivery deadlines or “timeboxes”. If the project starts to slip, emphasis is on reducing requirements to fit the timebox, not in increasing the deadline.
+			</li>
+			<li>
+				Generally includes 
+				<a href="https://en.wikipedia.org/wiki/Joint_application_design" title="Joint application design">joint application design</a> (JAD), where users are intensely involved in 
+				<a href="https://en.wikipedia.org/wiki/System_design" title="System design">system design</a>, via consensus building in either structured workshops, or electronically facilitated interaction.
+			</li>
+			<li>Active user involvement is imperative.</li>
+			<li>Iteratively produces production software, as opposed to a throwaway prototype.</li>
+			<li>Produces documentation necessary to facilitate future development and maintenance.</li>
+			<li>Standard systems analysis and design methods can be fitted into this framework.</li>
+		</ul>
+
+		<h2 id="Methodologies">Methodologies</h2>
+		<h3 id="Agile_development">Agile development</h3>
+		<div role="note">
+			Main article: 
+			<a href="https://en.wikipedia.org/wiki/Agile_software_development" title="Agile software development">Agile software development</a>
+		</div>
+		<p>
+			"Agile software development" refers to a group of software development methodologies based on iterative development, where requirements and solutions evolve via collaboration between self-organizing cross-functional teams. The term was coined in the year 2001 when the 
+			<a href="https://en.wikipedia.org/wiki/Agile_Manifesto" title="Agile Manifesto">Agile Manifesto</a> was formulated.
+		</p>
+		<p>
+			Agile software development uses iterative development as a basis but advocates a lighter and more people-centric viewpoint than traditional approaches. Agile processes fundamentally incorporate iteration and the continuous feedback that it provides to successively refine and deliver a software system.
+		</p>
+		<p>
+			There are many agile methodologies, including:
+		</p>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Dynamic_systems_development_method" title="Dynamic systems development method">Dynamic systems development method</a> (DSDM)
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Kanban_(development)" title="Kanban (development)">Kanban</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Scrum_(development)" title="Scrum (development)">Scrum</a>
+			</li>
+		</ul>
+		<h3 id="Waterfall_development">Waterfall development</h3>
+		<div role="note">Main article: 
+			<a href="https://en.wikipedia.org/wiki/Waterfall_model" title="Waterfall model">Waterfall model</a>
+		</div>
+		<img alt="" src="img/Waterfall_model.png" width="220" height="165" />
+		<span>
+			The activities of the software development process represented in the 
+			<a href="https://en.wikipedia.org/wiki/Waterfall_model" title="Waterfall model">waterfall model</a>. There are several other models to represent this process.
+		</span>
+		<p>
+			The waterfall model is a sequential development approach, in which development is seen as flowing steadily downwards (like a waterfall) through several phases, typically:
+		</p>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Requirements_analysis" title="Requirements analysis">Requirements analysis</a> resulting in a 
+				<a href="https://en.wikipedia.org/wiki/Software_requirements_specification" title="Software requirements specification">software requirements specification</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">Software design</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">Implementation</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_testing" title="Software testing">Testing</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/System_integration" title="System integration">Integration</a>, if there are multiple subsystems
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_deployment" title="Software deployment">Deployment</a> (or 
+				<a href="https://en.wikipedia.org/wiki/Installation_(computer_programs)" title="Installation (computer programs)">Installation</a>)
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_maintenance" title="Software maintenance">Maintenance</a>
+			</li>
+		</ul>
+		<p>
+			The first formal description of the method is often cited as an article published by 
+			<a href="https://en.wikipedia.org/wiki/Winston_W._Royce" title="Winston W. Royce">Winston W. Royce</a>
+			<sup id="cite_ref-8">
+				<a href="#cite_note-8">&#91;8&#93;</a>
+			</sup> in 1970 although Royce did not use the term "waterfall" in this article. Royce presented this model as an example of a flawed, non-working model.
+			<sup id="cite_ref-9">
+				<a href="#cite_note-9">&#91;9&#93;</a>
+			</sup>
+		</p>
+		<p>
+			The basic principles are:
+			<sup id="cite_ref-CMS08_1-4">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<ul>
+			<li>Project is divided into sequential phases, with some overlap and splashback acceptable between phases.</li>
+			<li>Emphasis is on planning, time schedules, target dates, budgets and implementation of an entire system at one time.</li>
+			<li>
+				Tight control is maintained over the life of the project via extensive written documentation, formal reviews, and approval/signoff by the user and information technology management occurring at the end of most phases before beginning the next phase.  Written documentation is an explicit deliverable of each phase.
+			</li>
+		</ul>
+		<p>
+			The waterfall model is a traditional engineering approach applied to software engineering.  A strict waterfall approach discourages revisiting and revising any prior phase once it is complete. This "inflexibility" in a pure waterfall model has been a source of criticism by supporters of other more "flexible" models.  It has been widely blamed for several large-scale government projects running over budget, over time and sometimes failing to deliver on requirements due to the 
+			<a href="https://en.wikipedia.org/wiki/Big_Design_Up_Front" title="Big Design Up Front">Big Design Up Front</a> approach. Except when contractually required, the waterfall model has been largely superseded by more flexible and versatile methodologies developed specifically for software development. See 
+			<a href="https://en.wikipedia.org/wiki/Waterfall_model#Criticism" title="Waterfall model">Criticism of Waterfall model</a>.
+		</p>
+		<h3 id="Spiral_development">Spiral development</h3>
+		<div role="note">
+			Main article: 
+			<a href="https://en.wikipedia.org/wiki/Spiral_model" title="Spiral model">Spiral model</a>
+		</div>
+		<img src="img/Spiral_model_%28Boehm%2C_1988%29.png" width="400" height="333" />
+		<span>Spiral model (Boehm, 1988)</span>
+		<p>
+			In 1988, 
+			<a href="https://en.wikipedia.org/wiki/Barry_Boehm" title="Barry Boehm">Barry Boehm</a> published a formal software system development "spiral model," which combines some key aspect of the 
+			<a href="https://en.wikipedia.org/wiki/Waterfall_model" title="Waterfall model">waterfall model</a> and 
+			<a href="https://en.wikipedia.org/wiki/Rapid_application_development" title="Rapid application development">rapid prototyping</a> methodologies, in an effort to combine advantages of 
+			<a href="https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design" title="Top-down and bottom-up design">top-down and bottom-up</a> concepts.  It provided emphasis in a key area many felt had been neglected by other methodologies: deliberate iterative risk analysis, particularly suited to large-scale complex systems.
+		</p>
+		<p>
+			The basic principles are:
+			<sup id="cite_ref-CMS08_1-5">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<ul>
+			<li>
+				Focus is on risk assessment and on minimizing project risk by breaking a project into smaller segments and providing more ease-of-change during the development process, as well as providing the opportunity to evaluate risks and weigh consideration of project continuation throughout the life cycle.
+			</li>
+			<li>
+				"Each cycle involves a progression through the same sequence of steps, for each part of the product and for each of its levels of elaboration, from an overall concept-of-operation document down to the coding of each individual program."
+				<sup id="cite_ref-BB86_10-0">
+					<a href="#cite_note-BB86-10">&#91;10&#93;</a>
+				</sup>
+			</li>
+			<li>
+				Each trip around the spiral traverses four basic quadrants: (1) determine objectives, alternatives, and constraints of the iteration; (2) evaluate alternatives; Identify and resolve risks; (3) develop and verify deliverables from the iteration; and (4) plan the next iteration.
+				<sup id="cite_ref-RT-BB86_11-0">
+					<a href="#cite_note-RT-BB86-11">&#91;11&#93;</a>
+				</sup>
+			</li>
+			<li>
+				Begin each cycle with an identification of stakeholders and their "win conditions", and end each cycle with review and commitment.
+				<sup id="cite_ref-12">
+					<a href="#cite_note-12">&#91;12&#93;</a>
+				</sup>
+			</li>
+		</ul>
+		<h3 id="Offshore_development">Offshore development</h3>
+		<div role="note">
+			Main article: 
+			<a href="https://en.wikipedia.org/wiki/Offshore_custom_software_development" title="Offshore custom software development">Offshore custom software development</a>
+		</div>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Offshore_custom_software_development" title="Offshore custom software development">Offshore custom software development</a> aims at dispatching the software development process over various geographical areas to optimize project spending by capitalizing on countries with lower salaries and operating costs. Geographically distributed teams can be integrated at any point of the software development process through custom hybrid models.
+			<sup id="cite_ref-13">
+				<a href="#cite_note-13">&#91;13&#93;</a>
+			</sup>
+		</p>
+		<h3 id="Other">Other</h3>
+		<p>
+			Other high-level software project methodologies include:
+		</p>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Behavior-driven_development" title="Behavior-driven development">Behavior-driven development</a> and business process management
+				<sup id="cite_ref-ieeeswbdd_14-0">
+					<a href="#cite_note-ieeeswbdd-14">&#91;14&#93;</a>
+				</sup>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Chaos_model" title="Chaos model">Chaos model</a> - The main rule is always resolve the most important issue first.
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Incremental_funding_methodology" title="Incremental funding methodology">Incremental funding methodology</a> - an iterative approach
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Lightweight_methodology" title="Lightweight methodology">Lightweight methodology</a> - a general term for methods that only have a few rules and practices
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Structured_systems_analysis_and_design_method" title="Structured systems analysis and design method">Structured systems analysis and design method</a> - a specific version of waterfall
+			</li>
+			<li>
+				Slow programming, as part of the larger 
+				<a href="https://en.wikipedia.org/wiki/Slow_movement_(culture)" title="Slow movement (culture)">Slow Movement</a>, emphasizes careful and gradual work without (or minimal) time pressures. Slow programming aims to avoid bugs and overly quick release schedules.
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/V-Model_(software_development)" title="V-Model (software development)">V-Model (software development)</a> - an extension of the waterfall model
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Unified_Process" title="Unified Process">Unified Process</a> (UP) is an iterative software development methodology framework, based on 
+				<a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" title="Unified Modeling Language">Unified Modeling Language</a> (UML). UP organizes the development of software into four phases, each consisting of one or more executable iterations of the software at that stage of development: inception, elaboration, construction, and guidelines. Many tools and products exist to facilitate UP implementation. One of the more popular versions of UP is the 
+				<a href="https://en.wikipedia.org/wiki/Rational_Unified_Process" title="Rational Unified Process">Rational Unified Process</a> (RUP).
+			</li>
+		</ul>
+
+		<h2 id="Process_meta-models">Process meta-models</h2>
+		<p>
+			Some "
+			<a href="https://en.wikipedia.org/wiki/Process_model" title="Process model">process models</a>" are abstract descriptions for evaluating, comparing, and improving the specific process adopted by an organization.
+		</p>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/ISO/IEC_12207" title="ISO/IEC 12207">ISO/IEC 12207</a> is the international standard describing the method to select, implement, and monitor the life cycle for software.
+			</li>
+			<li>
+				The 
+				<a href="https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration" title="Capability Maturity Model Integration">Capability Maturity Model Integration</a> (CMMI) is one of the leading models and based on best practice. Independent assessments grade organizations on how well they follow their defined processes, not on the quality of those processes or the software produced. CMMI has replaced 
+				<a href="https://en.wikipedia.org/wiki/Capability_Maturity_Model" title="Capability Maturity Model">CMM</a>.
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/ISO_9000" title="ISO 9000">ISO 9000</a> describes standards for a formally organized process to manufacture a product and the methods of managing and monitoring progress. Although the standard was originally created for the manufacturing sector, ISO 9000 standards have been applied to software development as well. Like CMMI, certification with ISO 9000 does not guarantee the quality of the end result, only that formalized business processes have been followed.
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/ISO/IEC_15504" title="ISO/IEC 15504">ISO/IEC 15504</a>
+				<i>Information technology &#8212; Process assessment</i> also known as Software Process Improvement Capability Determination (SPICE), is a "framework for the assessment of software processes". This standard is aimed at setting out a clear model for process comparison. SPICE is used much like CMMI. It models processes to manage, control, guide and monitor software development. This model is then used to measure what a development organization or project team actually does during software development. This information is analyzed to identify weaknesses and drive improvement. It also identifies strengths that can be continued or integrated into common practice for that organization or team.
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/ISO/IEC_24744" title="ISO/IEC 24744">ISO/IEC 24744</a>
+				<i>Software Engineering — Metamodel for Development Methodologies</i>, is a powertype-based metamodel for software development methodologies.
+			</li>
+			<li>SPEM 2.0 by the Object Management Group</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Soft_systems_methodology" title="Soft systems methodology">Soft systems methodology</a> - a general method for improving management processes
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Method_engineering" title="Method engineering">Method engineering</a> - a general method for improving information system processes
+			</li>
+		</ul>
+
+		<h2 id="In_practice">In practice</h2>
+		<img alt="" src="img/Three_software_development_patterns_mashed_together.png" width="420" height="398" />
+		<span>The three basic approaches applied to software development methodology frameworks.</span>
+		<p>
+			A variety of such frameworks have evolved over the years, each with its own recognized strengths and weaknesses. One software development methodology framework is not necessarily suitable for use by all projects. Each of the available methodology frameworks are best suited to specific kinds of projects, based on various technical, organizational, project and team considerations.
+			<sup id="cite_ref-CMS08_1-6">
+				<a href="#cite_note-CMS08-1">&#91;1&#93;</a>
+			</sup>
+		</p>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Software_development" title="Software development">Software development</a> organizations implement process methodologies to ease the process of development. Sometimes, contractors may require methodologies employed, an example is the U.S. 
+			<a href="https://en.wikipedia.org/wiki/Arms_industry" title="Arms industry">defense industry</a>, which requires a rating based on 
+			<a href="https://en.wikipedia.org/wiki/Process_model" title="Process model">process models</a> to obtain contracts.  The international standard for describing the method of selecting, implementing and monitoring the life cycle for software is 
+			<a href="https://en.wikipedia.org/wiki/ISO/IEC_12207" title="ISO/IEC 12207">ISO/IEC 12207</a>.
+		</p>
+		<p>
+			A decades-long goal has been to find repeatable, predictable processes that improve productivity and quality. Some try to systematize or formalize the seemingly unruly task of designing software. Others apply 
+			<a href="https://en.wikipedia.org/wiki/Project_management" title="Project management">project management</a> techniques to designing software. Large numbers of software projects do not meet their expectations in terms of functionality, cost, or delivery schedule - see 
+			<a href="https://en.wikipedia.org/wiki/List_of_failed_and_overbudget_custom_software_projects" title="List of failed and overbudget custom software projects">List of failed and overbudget custom software projects</a> for some notable examples.
+		</p>
+		<p>
+			Organizations may create a 
+			<a href="https://en.wikipedia.org/wiki/Software_Engineering_Process_Group" title="Software Engineering Process Group">Software Engineering Process Group</a> (SEPG), which is the focal point for process improvement. Composed of line practitioners who have varied skills, the group is at the center of the collaborative effort of everyone in the organization who is involved with software engineering process improvement.
+		</p>
+		<p>
+			A particular development team may also agree to programming environment details, such as which 
+			<a href="https://en.wikipedia.org/wiki/Integrated_development_environment" title="Integrated development environment">integrated development environment</a> is used, and one or more dominant 
+			<a href="https://en.wikipedia.org/wiki/Programming_paradigm" title="Programming paradigm">programming paradigms</a>, 
+			<a href="https://en.wikipedia.org/wiki/Programming_style" title="Programming style">programming style</a> rules, or choice of specific 
+			<a href="https://en.wikipedia.org/wiki/Software_libraries" title="Software libraries">software libraries</a> or 
+			<a href="https://en.wikipedia.org/wiki/Software_framework" title="Software framework">software frameworks</a>.  These details are generally not dictated by the choice of model or general methodology.
+		</p>
+		<img src="img/SLDC.jpg" width="220" height="91" />
+		<span>Software development life cycle (SDLC)</span>
+
+		<h2 id="See_also">See also</h2>
+		<ul>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle" title="Systems development life cycle">Systems development life cycle</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Computer-aided_software_engineering" title="Computer-aided software engineering">Computer-aided software engineering</a> (some of these tools support specific methodologies)
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/List_of_software_development_philosophies" title="List of software development philosophies">List of software development philosophies</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Outline_of_software_engineering" title="Outline of software engineering">Outline of software engineering</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/OpenUP" title="OpenUP">OpenUP</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Project_management" title="Project management">Project management</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_development" title="Software development">Software development</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_development_effort_estimation" title="Software development effort estimation">Software development effort estimation</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Software release life cycle</a>
+			</li>
+			<li>
+				<a href="https://en.wikipedia.org/wiki/Top-down_and_bottom-up_design#Computer_science" title="Top-down and bottom-up design">Top-down and bottom-up design#Computer science</a>
+			</li>
+		</ul>
+
+		<h2 id="References">References</h2>
+		<ol>
+			<li id="cite_note-CMS08-1">
+				<span>^ 
+					<a href="#cite_ref-CMS08_1-0">
+						<sup>
+							<i>
+								<b>a</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-1">
+						<sup>
+							<i>
+								<b>b</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-2">
+						<sup>
+							<i>
+								<b>c</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-3">
+						<sup>
+							<i>
+								<b>d</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-4">
+						<sup>
+							<i>
+								<b>e</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-5">
+						<sup>
+							<i>
+								<b>f</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-CMS08_1-6">
+						<sup>
+							<i>
+								<b>g</b>
+							</i>
+						</sup>
+					</a>
+				</span>
+				<span>Centers for Medicare &amp; Medicaid Services (CMS) Office of Information Service (2008). 
+					<i>
+						<a rel="nofollow" href="http://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/XLC/Downloads/SelectingDevelopmentApproach.pdf">Selecting a development approach</a>
+					</i>. Webarticle. United States Department of Health and Human Services (HHS). Re-validated: March 27, 2008.  Retrieved 27 Oct 2008.
+				</span>
+			</li>
+			<li id="cite_note-Ell04-2">
+				<span>^ 
+					<a href="#cite_ref-Ell04_2-0">
+						<sup>
+							<i>
+								<b>a</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-Ell04_2-1">
+						<sup>
+							<i>
+								<b>b</b>
+							</i>
+						</sup>
+					</a>
+				</span>
+				<span>Geoffrey Elliott (2004) 
+					<i>Global Business Information Technology: an integrated systems approach</i>. Pearson Education. p.87.
+				</span>
+			</li>
+			<li id="cite_note-ieeesw-3">
+				<span>
+					<b>
+						<a href="#cite_ref-ieeesw_3-0">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						Suryanarayana, Girish (2015). "Software Process versus Design Quality: Tug of War?". 
+						<i>IEEE Software</i>. 
+						<b>32</b> (4): 7–11. 
+						<a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:
+						<a rel="nofollow" href="//doi.org/10.1109%2FMS.2015.87">10.1109/MS.2015.87</a>.
+					</cite>
+				</span>
+			</li>
+			<li id="cite_note-4">
+				<span>
+					<b>
+						<a href="#cite_ref-4">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						saeeda, Hina; Khalid, Hannan; Ahmed, Mukhtar; Sameer, Abu; Arif, Fahim (2015-09-01). 
+						<a rel="nofollow" href="https://www.researchgate.net/publication/283527859">"Systematic Literature Review of Agile Scalability for Large Scale Projects"</a>. 
+						<i>ResearchGate</i>. 
+						<b>6</b> (9). 
+						<a href="https://en.wikipedia.org/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;
+						<span title="Freely accessible">
+							<a rel="nofollow" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.695.4994">10.1.1.695.4994</a>
+						</span>. 
+						<a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:
+						<a rel="nofollow" href="//doi.org/10.14569%2FIJACSA.2015.060908">10.14569/IJACSA.2015.060908</a>. 
+						<a href="https://en.wikipedia.org/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;
+						<a rel="nofollow" href="//www.worldcat.org/issn/2156-5570">2156-5570</a>.
+					</cite>
+				</span>
+			</li>
+			<li id="cite_note-CI0-5">
+				<span>
+					<b>
+						<a href="#cite_ref-CI0_5-0">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						<a rel="nofollow" href="https://www.thoughtworks.com/continuous-integration">"Continuous Integration"</a>.
+					</cite>
+				</span>
+			</li>
+			<li id="cite_note-6">
+				<span>
+					<b>
+						<a href="#cite_ref-6">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						<a href="https://en.wikipedia.org/wiki/Grady_Booch" title="Grady Booch">Booch, Grady</a> (1991). 
+						<a rel="nofollow" href="https://books.google.com/?id=w5VQAAAAMAAJ&amp;q=continuous+integration+inauthor:grady+inauthor:booch&amp;dq=continuous+integration+inauthor:grady+inauthor:booch">
+							<i>Object Oriented Design: With Applications</i>
+						</a>. 
+						<a href="https://en.wikipedia.org/wiki/Benjamin_Cummings" title="Benjamin Cummings">Benjamin Cummings</a>. p.&#160;209. 
+						<a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;
+						<a href="https://en.wikipedia.org/wiki/Special:BookSources/9780805300918" title="Special:BookSources/9780805300918">
+							<bdi>9780805300918</bdi>
+						</a>
+						<span>. Retrieved 
+							<span>18 August</span> 2014
+						</span>.
+					</cite>
+				</span>
+			</li>
+			<li id="cite_note-WBD04-7">
+				<span>^ 
+					<a href="#cite_ref-WBD04_7-0">
+						<sup>
+							<i>
+								<b>a</b>
+							</i>
+						</sup>
+					</a>
+					<a href="#cite_ref-WBD04_7-1">
+						<sup>
+							<i>
+								<b>b</b>
+							</i>
+						</sup>
+					</a>
+				</span>
+				<span>
+					<a href="https://en.wikipedia.org/wiki/Whitten,_Jeffrey_L." title="Whitten, Jeffrey L.">Whitten, Jeffrey L.</a>; 
+					<a href="https://en.wikipedia.org/wiki/Lonnie_D._Bentley" title="Lonnie D. Bentley">Lonnie D. Bentley</a>, 
+					<a href="https://en.wikipedia.org/wiki/Kevin_C._Dittman" title="Kevin C. Dittman">Kevin C. Dittman</a>. (2003). 
+					<i>Systems Analysis and Design Methods</i>. 6th edition. 
+					<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886058088"/>
+					<a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;
+					<a href="https://en.wikipedia.org/wiki/Special:BookSources/0-256-19906-X" title="Special:BookSources/0-256-19906-X">0-256-19906-X</a>.
+				</span>
+			</li>
+			<li id="cite_note-8">
+				<span>
+					<b>
+						<a href="#cite_ref-8">^</a>
+					</b>
+				</span>
+				<span>
+					<a rel="nofollow" href="http://cartoon.iguw.tuwien.ac.at/fit/fit01/wasserfall/entstehung.html">Wasserfallmodell &gt; Entstehungskontext</a>, Markus Rerych, Institut für Gestaltungs- und Wirkungsforschung, TU-Wien. Accessed on line November 28, 2007.
+				</span>
+			</li>
+			<li id="cite_note-9">
+				<span>
+					<b>
+						<a href="#cite_ref-9">^</a>
+					</b>
+				</span>
+				<span>Conrad Weisert, 
+					<a rel="nofollow" href="http://www.idinews.com/waterfall.html">Waterfall methodology: there's no such thing!</a>
+				</span>
+			</li>
+			<li id="cite_note-BB86-10">
+				<span>
+					<b>
+						<a href="#cite_ref-BB86_10-0">^</a>
+					</b>
+				</span>
+				<span>
+					<a href="https://en.wikipedia.org/wiki/Barry_Boehm" title="Barry Boehm">Barry Boehm</a> (1996)., 
+					<a rel="nofollow" href="http://doi.acm.org/10.1145/12944.12948">"A Spiral Model of Software Development and Enhancement</a>". In: 
+					<i>ACM SIGSOFT Software Engineering Notes</i> (ACM) 11(4):14-24, August 1986
+				</span>
+			</li>
+			<li id="cite_note-RT-BB86-11">
+				<span>
+					<b>
+						<a href="#cite_ref-RT-BB86_11-0">^</a>
+					</b>
+				</span>
+				<span>Richard H. Thayer, Barry W. Boehm (1986). 
+					<i>Tutorial: software engineering project management</i>. Computer Society Press of the IEEE. p.130
+				</span>
+			</li>
+			<li id="cite_note-12">
+				<span>
+					<b>
+						<a href="#cite_ref-12">^</a>
+					</b>
+				</span>
+				<span>Barry W. Boehm (2000). 
+					<i>Software cost estimation with Cocomo II: Volume 1</i>.
+				</span>
+			</li>
+			<li id="cite_note-13">
+				<span>
+					<b>
+						<a href="#cite_ref-13">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						Stephanie Overby (1 October 2012). 
+						<a rel="nofollow" href="https://www.cio.com/article/2391721/7-tips-to-offshore-agile-development.html">"7 Tips to Offshore Agile Development"</a>. 
+						<i>Cio.com</i>
+						<span>. Retrieved 
+							<span>12 March</span> 2019
+						</span>.
+					</cite>
+				</span>
+			</li>
+			<li id="cite_note-ieeeswbdd-14">
+				<span>
+					<b>
+						<a href="#cite_ref-ieeeswbdd_14-0">^</a>
+					</b>
+				</span>
+				<span>
+					<cite>
+						Lübke, Daniel; van Lessen, Tammo (2016). "Modeling Test Cases in BPMN for Behavior-Driven Development". 
+						<i>IEEE Software</i>. 
+						<b>33</b> (5): 15–21. 
+						<a href="https://en.wikipedia.org/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:
+						<a rel="nofollow" href="//doi.org/10.1109%2FMS.2016.117">10.1109/MS.2016.117</a>.
+					</cite>
+				</span>
+			</li>
+		</ol>
+
+		<h2 id="External_links">External links</h2>
+		<ul>
+			<li>
+				<a rel="nofollow" href="http://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/XLC/Downloads/SelectingDevelopmentApproach.pdf">Selecting a development approach</a> at cms.hhs.gov.
+			</li>
+			<li>
+				Gerhard Fischer, 
+				<a rel="nofollow" href="http://l3d.cs.colorado.edu/~gerhard/papers/isfst2001.pdf">"The Software Technology of the 21st Century: From Software Reuse to Collaborative Software Design"</a>, 2001
+			</li>
+			<li>
+				<a rel="nofollow" href="https://www.agilealliance.org/agile101/subway-map-to-agile-practices/">Subway map of agile practices at Agile Alliance</a>
+			</li>
+		</ul>
+
+		<p>
+			<i>This page was last edited on 22 October 2019, at 13:13 (UTC).</i>
+		</p>
+	</body>
+</html>
